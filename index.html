@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Expense Tracker</legend>
+        <div class="container">
+            <div id="error-msg" style="display: none; color: red;">*Please add the details</div>
+            How/where did you spend? <input type="text" id="inputname">
+            Date <input type="date" id="inputdate">
+            Amount <input type="number" id="inputamount">
+            <button id="addbtn">Add Expense</button>
+
+        </div>
+    </fieldset>
+
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+            
+        </tr>
+    </table>
+    <div>Total amount :<span id = "totalamount"></span></div>
+    <script src="script.js"></script>
+</body>
+</html>
