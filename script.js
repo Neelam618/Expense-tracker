@@ -82,11 +82,11 @@ function deleteRow(event){
     event.target.parentNode.parentNode.remove();    //OR this.parentNode.remove();          //'this' here is delete button element 
     // console.log(event.target);
     
-    let items = JSON.parse(localStorage.getItem('items')) || [];
+    let items = JSON.parse(localStorage.getItem('expenseItems')) || [];
 
     let indexToDelete = parseInt(event.target.id.replace('deleteBtn', ""));   //means eg. from id deleteBtn0 only 0 will stay 
     items.splice(indexToDelete, 1);                     //deletes 1 delete button element starting from indexToDelete
-    localStorage.setItem("items", JSON.stringify(items));
+    localStorage.setItem("expenseItems", JSON.stringify(items));
 
     // to reassign ids to delete button element ( because id's sequence will be changed after deleting middle row)
     document.querySelectorAll("table .tablerow").forEach((row, index) => {
@@ -118,21 +118,19 @@ function storeItemsInLS(name, date, amount){
         amount: amount
     }
     //store row items
-    let items = JSON.parse(localStorage.getItem('items')) || [];
+    let items = JSON.parse(localStorage.getItem('expenseItems')) || [];
     items.push(obj);
-    localStorage.setItem("items", JSON.stringify(items));
+    localStorage.setItem("expenseItems", JSON.stringify(items));
 }
 
 function retrieveItemsFromLS(){
-    let itemsfromLS = JSON.parse(localStorage.getItem('items'));
+    let itemsfromLS = JSON.parse(localStorage.getItem('expenseItems'));
     let noExpensesAdded = document.getElementById('no-expenses');
-    if (itemsfromLS) {
+    if (itemsfromLS && itemsfromLS.length > 0) {
         itemsfromLS.forEach((obj, index) => {
             document.getElementById('table').appendChild(createTableRow(obj.name, obj.date, obj.amount, false));
         });
-        let totalAmtFromLS = JSON.parse(localStorage.getItem('amountsum'));
-        document.getElementById('totalamount').innerText = totalAmtFromLS;
-    }
+    } 
     else{
         noExpensesAdded.style.display = "block";
     }
