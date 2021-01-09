@@ -1,11 +1,13 @@
+body{
+    margin: 4em 1em!important;
+}
+
 input[type='text']{
     width: 400px;;
 }
 input[type='number']{
-    width: 100px;
+    width: 70px;
 }
-
-
 table{
     margin-top: 100px;
     border-collapse: collapse;

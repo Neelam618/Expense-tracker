@@ -88,7 +88,7 @@ function deleteRow(event){
     items.splice(indexToDelete, 1);                     //deletes 1 delete button element starting from indexToDelete
     localStorage.setItem("expenseItems", JSON.stringify(items));
 
-    // to reassign ids to delete button element ( because id's sequence will be changed after deleting middle row)
+    // to reassign ids to delete button element ( because id's sequence will be changed after deleting row other than last row)
     document.querySelectorAll("table .tablerow").forEach((row, index) => {
     row.getElementsByClassName("deletebtn")[0].id = "deleteBtn" + index;
     });
