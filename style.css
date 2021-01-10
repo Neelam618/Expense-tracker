@@ -28,7 +28,8 @@ input[type='number']{
 .addbtn{
     border-radius: 7px;
     padding: 5px 15px;
-    background-color: #c0e218;
+    background-color: #0cc712;
+    color: white;
     border: none;
 }
 

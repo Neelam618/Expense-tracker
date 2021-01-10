@@ -129,7 +129,7 @@ function retrieveItemsFromLS(){
     let noExpensesAdded = document.getElementById('no-expenses');
     if (itemsfromLS && itemsfromLS.length > 0) {
         itemsfromLS.forEach((obj, index) => {
-            document.getElementById('table').appendChild(createTableRow(obj.name, obj.date, obj.amount, false));
+            document.getElementById('tbody').appendChild(createTableRow(obj.name, obj.date, obj.amount, false));
         });
     } 
     else{
