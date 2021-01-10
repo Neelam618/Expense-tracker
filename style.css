@@ -19,6 +19,11 @@ font-weight: 700;}
     /* border-radius: 10px; */
     height: 35px;
 }
+.inputbox:focus{
+    /* outline: 1px solid pink; */
+    border-bottom: 3px solid green;
+    outline: none;
+}
 input[type='text']{
     width: 400px;
 }
@@ -32,7 +37,9 @@ input[type='number']{
     color: white;
     border: none;
 }
-
+.addbtn:hover{
+    background-color: #1ea523;
+}
 
 /* table */
 .table-container{
@@ -61,6 +68,17 @@ table th{
     padding: 3px 12px!important;
     border: none;
 }
+.deletebtn:hover{
+    background-color: #c5195a!important;
+}
+.deletebtn:hover .tablerow{
+    background-color: red!important;
+}
+
 .deletebtn-td{
     border: none;
+}
+.total{
+    font-weight: 700;
+    padding-left: 10px;
 }
