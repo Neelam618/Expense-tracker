@@ -42,6 +42,7 @@ function createTableRow(name, date, amount, storeInLS){
     newTableData3.innerText = amount;
 
     let newTableData4 = document.createElement('td');
+    newTableData4.className = "deletebtn-td";
     let deleteBtn = document.createElement('button');
     deleteBtn.className = "deletebtn";  
 
