@@ -6,7 +6,7 @@ document.getElementById('inputname').focus();
 document.getElementById('addbtn').addEventListener('click', verifyAndAdd);
 
 function addTableRow(){
-    document.getElementById('table').appendChild(onAddBtnClick());    //adds table row in table element
+    document.getElementById('tbody').appendChild(onAddBtnClick());    //adds table row in table element
 
     document.getElementById('inputname').value = "";
     document.getElementById('inputdate').value = "";
