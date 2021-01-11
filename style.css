@@ -24,7 +24,7 @@ font-weight: 700;}
     border-bottom: 3px solid green;
     outline: none;
 }
-input[type='text']{
+.inputtext{
     width: 400px;
 }
 input[type='number']{
@@ -81,4 +81,17 @@ table th{
 .total{
     font-weight: 700;
     padding-left: 10px;
+}
+@media screen and (max-width: 767px){
+    .inputtext{
+        width: 250px;
+    }
+}
+@media screen and (max-width: 328px){
+    .inputtext{
+        width: 150px;
+    }
+    body{
+        font-size: 0.8rem!important ;
+    }
 }
