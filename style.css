@@ -15,20 +15,30 @@ font-weight: 700;}
 }
 .inputbox{
     padding-left: 10px;
-    /* border: none; */
-    border: 1px solid black;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    /* border-radius: 10px; */
     /* background-color: #dceb92; */
     /* border-radius: 10px; */
     height: 40px;
 }
 .inputbox:focus{
-    /* outline: 1px solid pink; */
+    border: none;
     border-bottom: 3px solid green;
     outline: none;
 }
 .inputtext{
     width: 400px;
+    box-shadow: 0px 0px 9px -2px #A6B3BC;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+}
+.inputtext:focus{
+    border-bottom: 3px solid green;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
 }
 input[type='number']{
     width: 70px;
