@@ -63,9 +63,7 @@ font-weight: 700;}
     font-family: 'Palanquin', sans-serif;
 }
 table{
-    margin-top: 100px;
-    border-collapse: collapse;
-    /* width: 100%; */
+    /* margin-top: 100px; */
 }
 table td, th {
     text-align: left;
@@ -93,7 +91,6 @@ table th{
     width: 1px;
     text-align: right;
     border: none;
-
 }
 .no-expensestxt{
     border: none;
