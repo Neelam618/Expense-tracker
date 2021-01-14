@@ -8,7 +8,7 @@ font-weight: 700;}
     font-family: 'Palanquin', sans-serif;
     border: 1px solid black;
     box-shadow: 0px 0px 23px -2px #A6B3BC;
-    padding: 3em 1em;
+    padding: 3em;
     border: none;
     border-radius: 15px;
     width: fit-content;
@@ -33,6 +33,7 @@ font-weight: 700;}
     border: none;
     border-radius: 10px;
     height: 40px;
+    padding-left: 10px;
 }
 .inputtext:focus{
     border-bottom: 3px solid green;
@@ -40,8 +41,10 @@ font-weight: 700;}
     box-shadow: none;
     outline: none;
 }
-input[type='number']{
-    width: 70px;
+.inputdate{
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100px;
 }
 .addbtn{
     border-radius: 7px;
@@ -49,6 +52,7 @@ input[type='number']{
     background-color: #0cc712;
     color: white;
     border: none;
+    box-shadow: 0px 0px 10px 0px #A6B3BC;
 }
 .addbtn:hover{
     background-color: #1ea523;
@@ -61,7 +65,7 @@ input[type='number']{
 table{
     margin-top: 100px;
     border-collapse: collapse;
-    width: 100%;
+    /* width: 100%; */
 }
 table td, th {
     text-align: left;
@@ -69,6 +73,27 @@ table td, th {
 }
 table th{
     font-weight: 700;
+}
+.name{
+    width: 200px;
+}
+.date{
+    width: 100px;
+}
+.amount{
+    width: 1px;
+}
+.amountdate{
+    margin-top: 2em;
+}
+.amountdiv, .datediv{
+    font-weight: 700;
+}
+.deletebtn-td{
+    width: 1px;
+    text-align: right;
+    border: none;
+
 }
 .no-expensestxt{
     border: none;
@@ -87,24 +112,35 @@ table th{
 .deletebtn:hover .tablerow{
     background-color: red!important;
 }
-
-.deletebtn-td{
-    border: none;
-}
 .total{
     font-weight: 700;
     padding-left: 10px;
 }
-@media screen and (max-width: 767px){
-    .inputtext{
-        width: 250px;
-    }
-}
-@media screen and (max-width: 328px){
-    .inputtext{
-        width: 150px;
-    }
+@media screen and (max-width: 547px){
     body{
-        font-size: 0.8rem!important ;
+        font-size: 0.9rem!important ;
+    }
+    .form-container{
+        width: 98%;
+        padding: 3em 1.2em!important;
+    }
+    .inputtext{
+        width: 98%;
     }
 }
+@media screen and (max-width: 347px){
+    .amountdate{
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    .amountdiv{
+        align-self: flex-start;
+    }   
+    .datediv{
+        align-self: flex-start;
+    }  
+    .name{
+        width: 100px;
+    }
+}
+
