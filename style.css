@@ -82,7 +82,7 @@ table th{
     /* width: 1px; */
 }
 .amountdate{
-    /* margin-top: 2em; */
+    margin-top: 2em;
 }
 .amountdiv, .datediv{
     font-weight: 700;
@@ -90,7 +90,7 @@ table th{
 .deletebtn-td{
     width: 1px;
     text-align: right;
-    border: none;
+    /* border: none; */
 }
 
 
