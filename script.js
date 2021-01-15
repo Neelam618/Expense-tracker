@@ -4,7 +4,7 @@ calculateAmountSum();
 document.getElementById('inputname').focus();
 
 document.getElementById('addbtn').addEventListener('click', verifyAndAdd);
-let datatableInstance = $('#expenseTable').DataTable();
+window.datatableInstance = $('#expenseTable').DataTable();
 
 function addTableRow(){
     document.getElementById('tbody').appendChild(onAddBtnClick());    //adds table row in table element
@@ -58,6 +58,10 @@ function createTableRow(name, date, amount, storeInLS){
     newTableRow.appendChild(newTableData3);
     newTableRow.appendChild(newTableData4);
 
+    if (window.datatableInstance) {
+        window.datatableInstance.row.add(newTableRow);     // tell data table to add row in our table element
+    }
+
     if(storeInLS){         //if storeInLS is true
         storeItemsInLS(name, date, amount);
     }
@@ -81,8 +85,11 @@ function verifyAndAdd(){
 }
         
 function deleteRow(event){
-    event.target.parentNode.parentNode.remove();    //OR this.parentNode.remove();          //'this' here is delete button element 
-    // console.log(event.target);
+    let rowToDelete = event.target.parentNode.parentNode;
+    if (window.datatableInstance) {
+        window.datatableInstance.row(rowToDelete).remove(); // tell datatable to remove a row
+    }
+    rowToDelete.remove();    // remove row
     
     let items = JSON.parse(localStorage.getItem('expenseItems')) || [];
 
