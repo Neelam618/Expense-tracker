@@ -93,10 +93,13 @@ table th{
     /* border: none; */
 }
 
-
+.empty-td{
+    border-style: none;
+}
 .no-expensestxt{
     border: none;
     padding: 0;
+    white-space: nowrap;
 }
 .deletebtn{
     border-radius: 7px;
