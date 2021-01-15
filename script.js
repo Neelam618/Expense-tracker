@@ -4,6 +4,7 @@ calculateAmountSum();
 document.getElementById('inputname').focus();
 
 document.getElementById('addbtn').addEventListener('click', verifyAndAdd);
+let datatableInstance = $('#expenseTable').DataTable();
 
 function addTableRow(){
     document.getElementById('tbody').appendChild(onAddBtnClick());    //adds table row in table element
