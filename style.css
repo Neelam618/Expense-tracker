@@ -59,28 +59,30 @@ font-weight: 700;}
 }
 
 /* table */
-
 .table-container{
     font-family: 'Palanquin', sans-serif;
+    min-width: 200px!important;
+    max-width: 900px!important;
 }
-/* table td, table th {
+
+table td, table th {
     text-align: center;
-    padding: 0.1rem 0.5rem;
+    /* padding: 0.1rem 0.5rem; */
 }
 table th{
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 .name{
-    width: 200px;
+    /* width: 200px; */
 }
 .date{
-    width: 100px;
+    /* width: 100px; */
 }
 .amount{
-    width: 1px;
+    /* width: 1px; */
 }
 .amountdate{
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 .amountdiv, .datediv{
     font-weight: 700;
@@ -89,7 +91,9 @@ table th{
     width: 1px;
     text-align: right;
     border: none;
-} */
+}
+
+
 .no-expensestxt{
     border: none;
     padding: 0;
@@ -121,6 +125,19 @@ table th{
     }
     .inputtext{
         width: 98%;
+    }
+    .deletebtn{
+        padding: 2px 5px!important;
+        margin: 0px!important;
+    }
+    .deletebtn-td{
+        width: 50px;
+    }
+    td.amount{
+        width: 10px;
+    }
+    td.date{
+        width: 100px;
     }
 }
 @media screen and (max-width: 347px){
