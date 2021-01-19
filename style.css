@@ -44,7 +44,7 @@ font-weight: 700;}
     width: 100px;
 }
 .inputdate{
-    width: 80px;
+    width: 123px;
     cursor: pointer;
 }
 .addbtn{
@@ -119,9 +119,6 @@ table td, table th {
     .inputtext{
         width: 98%;
     }
-    .inputdate{
-        width: 72px;
-    } 
     .deletebtn{
         padding: 2px 5px!important;
         margin: 0px!important;
