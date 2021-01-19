@@ -14,6 +14,8 @@ function addTableRow(){
     document.getElementById('inputamount').value = "";
     document.getElementById('no-expenses').style.display = 'none';
     calculateAmountSum();
+
+    $('#datepicker').val(new Date().toISOString().slice(0,10));            //set todays date default in date field    
 }
 
 function onAddBtnClick() {
@@ -154,4 +156,4 @@ function calculateAmountSum(){
 }
 
 
-$('#datepicker').val(new Date().toISOString().slice(0,10));
+$('#datepicker').val(new Date().toISOString().slice(0,10));    //set todays date default in date field  
