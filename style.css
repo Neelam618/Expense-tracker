@@ -14,15 +14,12 @@ font-weight: 700;}
     width: fit-content;
 }
 .inputbox{
-    padding-left: 10px;
     border: none;
     border-bottom: 1px solid black;
-    /* border-radius: 10px; */
-    /* background-color: #dceb92; */
-    /* border-radius: 10px; */
     height: 40px;
+    margin-left: 10px;
 }
-.inputbox:focus{
+.inputbox:focus, .inputbox:hover{
     border: none;
     border-bottom: 3px solid green;
     outline: none;
@@ -35,7 +32,7 @@ font-weight: 700;}
     height: 40px;
     padding-left: 10px;
 }
-.inputtext:focus{
+.inputtext:focus, .inputtext:hover{
     border-bottom: 3px solid green;
     border-radius: 0;
     box-shadow: none;
@@ -45,6 +42,10 @@ font-weight: 700;}
     font-size: 1.5rem;
     font-weight: 700;
     width: 100px;
+}
+.inputdate{
+    width: 80px;
+    cursor: pointer;
 }
 .addbtn{
     border-radius: 7px;
@@ -67,19 +68,6 @@ font-weight: 700;}
 
 table td, table th {
     text-align: center;
-    /* padding: 0.1rem 0.5rem; */
-}
-table th{
-    /* font-weight: 700; */
-}
-.name{
-    /* width: 200px; */
-}
-.date{
-    /* width: 100px; */
-}
-.amount{
-    /* width: 1px; */
 }
 .amountdate{
     margin-top: 2em;
@@ -87,10 +75,12 @@ table th{
 .amountdiv, .datediv{
     font-weight: 700;
 }
+.inputlabel{
+    margin-left: 10px;
+}
 .deletebtn-td{
     width: 1px;
     text-align: right;
-    /* border: none; */
 }
 
 .empty-td{
@@ -153,6 +143,9 @@ table th{
     }   
     .datediv{
         align-self: flex-start;
+    }
+    .inputdate{
+        width: 75px;
     }  
     .name{
         width: 100px;

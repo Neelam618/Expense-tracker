@@ -20,7 +20,7 @@
     <script>
         $(function(){
             $("#datepicker").datepicker({
-                dateFormat: 'dd-MM-yy',
+                dateFormat: 'dd-mm-yy',
                 changeMonth:true,
                 changeYear:true,
             }).datepicker('setDate', '0' );     //0 means current date
@@ -39,8 +39,8 @@
             <div><input type="text" id="inputname" class="inputtext" placeholder="Enter Description"></div>
             <div>
                 <div class="amountdate d-flex justify-content-between align-items-center">
-                    <div class="amountdiv my-1">Amount <input type="number" id="inputamount" class="inputbox inputamt" placeholder="0.00"></div>
-                    <div class="datediv my-1">Date <input type="text" id="datepicker" class="inputbox" value=""><span class="glyphicon glyphicon-calender "></span></div>
+                    <div class="amountdiv my-1"><label class="inputlabel">Amount</label> <input type="number" id="inputamount" class="inputbox inputamt" placeholder="0.00"></div>
+                    <div class="datediv my-1"><label class="inputlabel">Date</label><input type="text" id="datepicker" class="inputbox inputdate" value=""><span class="glyphicon glyphicon-calender "></span></div>
                 </div>
             </div>
 

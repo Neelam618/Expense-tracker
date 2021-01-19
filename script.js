@@ -14,6 +14,14 @@ function addTableRow(){
     document.getElementById('inputamount').value = "";
     document.getElementById('no-expenses').style.display = 'none';
     calculateAmountSum();
+
+    $(function(){
+        $("#datepicker").datepicker({
+            dateFormat: 'dd-mm-yy',
+            changeMonth:true,
+            changeYear:true,
+        }).datepicker('setDate', '0' );     //0 means current date
+    })
 }
 
 function onAddBtnClick() {
