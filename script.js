@@ -10,7 +10,7 @@ function addTableRow(){
     document.getElementById('tbody').appendChild(onAddBtnClick());    //adds table row in table element
 
     document.getElementById('inputname').value = "";
-    document.getElementById('inputdate').value = "";
+    document.getElementById('datepicker').value = "";
     document.getElementById('inputamount').value = "";
     document.getElementById('no-expenses').style.display = 'none';
     calculateAmountSum();
@@ -19,7 +19,7 @@ function addTableRow(){
 function onAddBtnClick() {
 
     let expenseName = document.getElementById('inputname').value;
-    let date = document.getElementById('inputdate').value;
+    let date = document.getElementById('datepicker').value;
     let amount = document.getElementById('inputamount').value; 
     return createTableRow(expenseName, date, amount, true);
 }
@@ -70,7 +70,7 @@ function createTableRow(name, date, amount, storeInLS){
 
 function verifyAndAdd(){
     let inputName = document.getElementById('inputname').value,
-        inputDate = document.getElementById('inputdate').value,
+        inputDate = document.getElementById('datepicker').value,
         inputAmount = document.getElementById('inputamount').value,
         errorMsg = document.getElementById('error-msg');
     if(!inputName || !inputDate || !inputAmount){
