@@ -1,21 +1,31 @@
 retrieveItemsFromLS();
 calculateAmountSum();
+setDefaultDateTodays();
        
 document.getElementById('inputname').focus();
 
 document.getElementById('addbtn').addEventListener('click', verifyAndAdd);
-window.datatableInstance = $('#expenseTable').DataTable();
+window.datatableInstance = $('#expenseTable').DataTable();        
+
+function setDefaultDateTodays(){
+    $('#datepicker').val(new Date().toISOString().slice(0,10));            //set todays date default in date field \
+}
+
+function formatDate(dateString){
+    let formattedDate = new Date(dateString).toLocaleDateString();    //new Date() gives date object...convert obj into string
+    return formattedDate;
+}
 
 function addTableRow(){
     document.getElementById('tbody').appendChild(onAddBtnClick());    //adds table row in table element
-
     document.getElementById('inputname').value = "";
     document.getElementById('datepicker').value = "";
     document.getElementById('inputamount').value = "";
     document.getElementById('no-expenses').style.display = 'none';
-    calculateAmountSum();
+    calculateAmountSum();   
+    formatDate();
+    setDefaultDateTodays();
 
-    $('#datepicker').val(new Date().toISOString().slice(0,10));            //set todays date default in date field    
 }
 
 function onAddBtnClick() {
@@ -38,7 +48,7 @@ function createTableRow(name, date, amount, storeInLS){
 
     let newTableData2 = document.createElement('td');
     newTableData2.className = "date";   
-    newTableData2.innerText = date;
+    newTableData2.innerText = formatDate(date);
 
     let newTableData3 = document.createElement('td');
     newTableData3.className = "amount";     
@@ -156,4 +166,3 @@ function calculateAmountSum(){
 }
 
 
-$('#datepicker').val(new Date().toISOString().slice(0,10));    //set todays date default in date field  
