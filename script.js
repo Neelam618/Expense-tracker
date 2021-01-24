@@ -3,17 +3,16 @@ calculateAmountSum();
 setDefaultDateTodays();
        
 document.getElementById('inputname').focus();
-
 document.getElementById('addbtn').addEventListener('click', verifyAndAdd);
 window.datatableInstance = $('#expenseTable').DataTable();        
 
 function setDefaultDateTodays(){
-    $('#datepicker').val(new Date().toISOString().slice(0,10));            //set todays date default in date field \
+    $('#datepicker').val(new Date().toISOString().slice(0,10));            //sets todays date default in date field 
 }
 
 function formatDate(dateString){
-    let formattedDate = new Date(dateString).toLocaleDateString();    //new Date() gives date object...convert obj into string
-    return formattedDate;
+    let formattedDate = new Date(dateString).toLocaleDateString();    //new Date() gives current date object...convert obj into string
+    return formattedDate;                 //in format dd/mm/yyyy
 }
 
 function addTableRow(){
@@ -25,11 +24,9 @@ function addTableRow(){
     calculateAmountSum();   
     formatDate();
     setDefaultDateTodays();
-
 }
 
 function onAddBtnClick() {
-
     let expenseName = document.getElementById('inputname').value;
     let date = document.getElementById('datepicker').value;
     let amount = document.getElementById('inputamount').value; 

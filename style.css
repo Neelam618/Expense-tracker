@@ -2,8 +2,11 @@ body{
     margin: 4em 1em!important;
 }
 .title{
-font-weight: 700;}
-/* form */
+    font-weight: 700;
+}
+/* ==========================================================================
+    Form section
+   ========================================================================== */
 .form-container{
     font-family: 'Palanquin', sans-serif;
     border: 1px solid black;
@@ -46,6 +49,15 @@ font-weight: 700;}
 .inputdate{
     width: 126px;
 }
+.inputlabel{
+    margin-left: 10px;
+}
+.amountdatediv{
+    margin-top: 2em;
+}
+.amountdiv, .datediv{
+    font-weight: 700;
+}
 .addbtn{
     border-radius: 7px;
     padding: 5px 15px;
@@ -57,31 +69,21 @@ font-weight: 700;}
 .addbtn:hover{
     background-color: #1ea523;
 }
-
-/* table */
+/* ==========================================================================
+    Table section
+   ========================================================================== */
 .table-container{
     font-family: 'Palanquin', sans-serif;
     min-width: 200px!important;
     max-width: 900px!important;
 }
-
 table td, table th {
     text-align: center;
-}
-.amountdate{
-    margin-top: 2em;
-}
-.amountdiv, .datediv{
-    font-weight: 700;
-}
-.inputlabel{
-    margin-left: 10px;
 }
 .deletebtn-td{
     width: 1px;
     text-align: right;
 }
-
 .empty-td{
     border-style: none;
 }
@@ -107,6 +109,9 @@ table td, table th {
     font-weight: 700;
     padding-left: 10px;
 }
+/* ==========================================================================
+    Media queries
+   ========================================================================== */
 @media screen and (max-width: 547px){
     body{
         font-size: 0.9rem!important ;
@@ -132,8 +137,9 @@ table td, table th {
         width: 100px;
     }
 }
+
 @media screen and (max-width: 347px){
-    .amountdate{
+    .amountdatediv{
         flex-direction: column;
         margin-top: 1em;
     }

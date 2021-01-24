@@ -12,47 +12,45 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.23/datatables.min.css"/> 
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.23/datatables.min.js"></script>
 
-    
     <title>Expense Tracker</title>
 </head>
 <body>
     <h1 class="title text-center mb-5">Expense Tracker</h1>
     <div class="form-container mx-auto">
         <div class="text-left mb-3" id="error-msg" style="display: none; color: red;">*Please fill all the details</div>
-        <div class="">
+        <main>
             <div class="mb-2">How/where did you spend?</div>
             <div><input type="text" id="inputname" class="inputtext" placeholder="Enter Description"></div>
             <div>
-                <div class="amountdate d-flex justify-content-between align-items-center">
+                <div class="amountdatediv d-flex justify-content-between align-items-center">
                     <div class="amountdiv my-1"><label class="inputlabel">Amount</label> <input type="number" id="inputamount" class="inputbox inputamt" placeholder="0.00"></div>
                     <div class="datediv my-1"><label class="inputlabel">Date</label><input type="date" id="datepicker" class="inputbox inputdate" value=""><span class="glyphicon glyphicon-calender"></span></div>
                 </div>
             </div>
-
-        </div>
-        <div class="text-center mt-5">
-            <button class="addbtn" id="addbtn">Add Expense</button>
-        </div>
+            <div class="text-center mt-5">
+                <button class="addbtn" id="addbtn">Add Expense</button>
+            </div>    
+        </main>
     </div>
     <div class="container-fluid container-lg table-container mx-auto p-0 mt-5">
-            <table class="table mx-auto" id="expenseTable">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>   
-                <tbody id="tbody"> 
-                    <tr id="no-expenses" style="display: none;">
-                        <td class="no-expensestxt" colspan="4">No Expenses added yet!</td>
-                        <td class="empty-td"></td>
-                        <td class="empty-td"></td>
-                        <td class="empty-td"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <table class="table mx-auto" id="expenseTable">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>   
+            <tbody id="tbody"> 
+                <tr id="no-expenses" style="display: none;">
+                    <td class="no-expensestxt" colspan="4">No Expenses added yet!</td>
+                    <td class="empty-td"></td>
+                    <td class="empty-td"></td>
+                    <td class="empty-td"></td>
+                </tr>
+            </tbody>
+        </table>
         <div class="text-center">Total amount : <span class="total" id ="totalamount"></span></div>
     </div>
 
